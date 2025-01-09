@@ -14,7 +14,7 @@ import { GradientBorderButton } from "./ui/gradient-border-button";
 import { Separator } from "./ui/separator";
 import Image from "next/image";
 import { Link } from "next-view-transitions";
-import LabNavigation from "./lab-navigation";
+import LabNavigation from "@/app/(core)/labs/_components/lab-navigation";
 import { cn } from "@/lib/utils";
 import { useSelectedLayoutSegments } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";

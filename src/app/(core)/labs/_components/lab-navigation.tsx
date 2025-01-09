@@ -15,14 +15,14 @@ import {
 import { GradientBorderButton } from "@/components/ui/gradient-border-button";
 import { labs } from "@/lib/siteConfig";
 import { KeyboardEvent, useEffect, useState } from "react";
-import { Input } from "./ui/input";
-import { Button } from "./ui/button";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "./ui/tooltip";
+} from "@/components/ui/tooltip";
 
 const LabNavigation = () => {
   const router = useTransitionRouter();
