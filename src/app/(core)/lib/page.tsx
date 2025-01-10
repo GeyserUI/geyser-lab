@@ -17,7 +17,7 @@ export default async function Page() {
       <p className="font-semibold">Library</p>
       <p className="text-sm text-muted-foreground">
         Here you can find useful repos, hooks, and resources that you can
-        utilize in your own projects
+        utilize in your own projects.
       </p>
 
       <div className="relative mt-4">
