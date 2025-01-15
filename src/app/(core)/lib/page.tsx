@@ -29,7 +29,7 @@ export default async function Page() {
           <span className="w-full border-t" />
         </div>
         <div className="relative flex justify-center text-xs uppercase">
-          <span className="bg-card px-2 text-muted-foreground">
+          <span className="bg-card dark:bg-neutral-900 px-2 text-muted-foreground">
             Github Repos
           </span>
         </div>
@@ -44,11 +44,13 @@ export default async function Page() {
           <span className="w-full border-t" />
         </div>
         <div className="relative flex justify-center text-xs uppercase">
-          <span className="bg-card px-2 text-muted-foreground">Hooks</span>
+          <span className="bg-card px-2 dark:bg-neutral-900 text-muted-foreground">
+            Hooks
+          </span>
         </div>
       </div>
       <HookDisplay />
-      <div className="relative mt-4">
+      {/* <div className="relative mt-4">
         <div className="absolute left-3 top-1/2 flex -translate-y-1/2 items-center">
           <LayoutList className="h-4 w-4 text-zinc-400 dark:text-zinc-500" />
         </div>
@@ -62,7 +64,7 @@ export default async function Page() {
       </div>
       {hooks.map((hook, idx) => (
         <div key={idx}>{hook.name}</div>
-      ))}
+      ))} */}
     </div>
   );
 }

@@ -15,7 +15,7 @@ async function GithubRepoRSC({ url }: { url: string }) {
   const { description, stargazers_count, forks, owner, name, html_url } =
     await getRepo(url);
   return (
-    <div className="rounded-xl border border-gray-200 bg-white transition-all hover:border-gray-500 hover:ring-4 hover:ring-gray-200">
+    <div className="rounded-xl border   transition-all hover:border-gray-500 hover:ring-4 hover:ring-gray-200 dark:hover:ring-neutral-800 dark:hover:border-neutral-600">
       <Link
         href={html_url}
         target="_blank"
@@ -24,11 +24,13 @@ async function GithubRepoRSC({ url }: { url: string }) {
       >
         <div className="flex items-start justify-between">
           <div>
-            <p className="text-2xl font-normal">
+            <p className="text-2xl font-normal dark:text-muted-foreground">
               {owner.login}/
-              <span className="font-bold text-gray-800">{name}</span>
+              <span className="font-bold text-gray-800 dark:text-white">
+                {name}
+              </span>
             </p>
-            <p className="mt-2 text-sm font-normal max-w-md text-gray-500">
+            <p className="mt-2 text-sm font-normal max-w-md text-gray-500 dark:text-muted-foreground">
               {description}
             </p>
           </div>
@@ -48,17 +50,23 @@ async function GithubRepoRSC({ url }: { url: string }) {
             <div className="flex items-start space-x-2">
               <Star className="size-4" />
               <div>
-                <p className="font-semibold text-gray-600">
+                <p className="font-semibold text-gray-600 dark:text-foreground">
                   {stargazers_count}
                 </p>
-                <p className="text-xs font-normal text-gray-500">Stars</p>
+                <p className="text-xs font-normal text-gray-500 dark:text-foreground">
+                  Stars
+                </p>
               </div>
             </div>
             <div className="flex items-start space-x-2">
               <GitFork className="size-4" />
               <div>
-                <p className="font-semibold text-gray-600">{forks}</p>
-                <p className="text-xs font-normal text-gray-500">Forks</p>
+                <p className="font-semibold text-gray-600 dark:text-foreground">
+                  {forks}
+                </p>
+                <p className="text-xs font-normal text-gray-500 dark:text-foreground">
+                  Forks
+                </p>
               </div>
             </div>
           </div>
